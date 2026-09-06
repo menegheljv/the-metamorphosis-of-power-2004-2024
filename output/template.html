@@ -661,34 +661,34 @@
     <p>Do lado adversário, o padrão é o oposto. Nas cinco eleições perdidas por este grupo, entre 2004 e 2020, quem venceu foi sempre o <strong>PSB</strong>: Dr. Fernando levou 2004, 2008, 2016 e 2020, e Roberto Fiorin, também PSB, levou 2012, quatro mandatos e dois nomes diferentes sob a mesma legenda, vinte anos seguidos. Essa sequência só se rompe em 2024, quando Rolmar Boteccia tenta manter o PSB no poder e perde para o PP de Hugo Luiz. Ou seja, enquanto o lado que perdia trocava de partido a cada pleito, o lado que vencia tinha uma legenda estável havia duas décadas. Foi justamente essa estabilidade que quebrou em 2024, junto com o resultado.</p>
 
     <div class="table-scroll">
-      <table class="data">
+      <table class="data stack-mobile">
         <thead>
-          <tr><th>Ano</th><th>Partido do grupo</th><th>Espectro</th><th class="num">Partidos</th><th>Coligação</th><th>Resultado</th></tr>
+          <tr><th>Ano</th><th>Partido do grupo</th><th>Espectro</th><th class="num">Partidos</th><th>Coligação</th></tr>
         </thead>
         <tbody>
-          <tr><td>2004</td><td><span class="party-chip pt">PT</span></td><td>Esquerda</td><td class="num">5</td><td>PPS / PT / PSDB / PTN / PT do B</td><td>derrota</td></tr>
-          <tr><td>2008</td><td><span class="party-chip psdb">PSDB</span></td><td>Centro-direita</td><td class="num">5</td><td>PTB / PSDB / PMDB / PT do B / PPS</td><td>derrota</td></tr>
-          <tr><td>2012</td><td><span class="party-chip psd">PSD</span></td><td>Centro-direita</td><td class="num">6</td><td>PT / PTB / PMDB / PPS / DEM / PSD</td><td>derrota</td></tr>
-          <tr><td>2016</td><td><span class="party-chip pmdb">PMDB</span></td><td>Centro</td><td class="num">9</td><td>PMDB / PPS / PSD / PTB / PT / PDT / PATRIOTA / REDE / DEM</td><td>derrota (maior coligação da série)</td></tr>
-          <tr><td>2020</td><td><span class="party-chip republicanos">Republicanos</span></td><td>Direita</td><td class="num">3</td><td>PTB / REPUBLICANOS / PATRIOTA</td><td>derrota (menor coligação da série)</td></tr>
-          <tr class="flip"><td>2024</td><td><span class="party-chip pp">PP</span></td><td>Direita</td><td class="num">5</td><td>REPUBLICANOS / PP / MDB / Federação PSDB&#8209;Cidadania</td><td>vitória</td></tr>
+          <tr><td data-label="Ano">2004</td><td data-label="Partido"><span class="party-chip pt">PT</span></td><td data-label="Espectro">Esquerda</td><td class="num" data-label="Partidos">5</td><td data-label="Coligação">PPS / PT / PSDB / PTN / PT do B</td></tr>
+          <tr><td data-label="Ano">2008</td><td data-label="Partido"><span class="party-chip psdb">PSDB</span></td><td data-label="Espectro">Centro-direita</td><td class="num" data-label="Partidos">5</td><td data-label="Coligação">PTB / PSDB / PMDB / PT do B / PPS</td></tr>
+          <tr><td data-label="Ano">2012</td><td data-label="Partido"><span class="party-chip psd">PSD</span></td><td data-label="Espectro">Centro-direita</td><td class="num" data-label="Partidos">6</td><td data-label="Coligação">PT / PTB / PMDB / PPS / DEM / PSD</td></tr>
+          <tr><td data-label="Ano">2016</td><td data-label="Partido"><span class="party-chip pmdb">PMDB</span></td><td data-label="Espectro">Centro</td><td class="num" data-label="Partidos">9</td><td data-label="Coligação">PMDB / PPS / PSD / PTB / PT / PDT / PATRIOTA / REDE / DEM</td></tr>
+          <tr><td data-label="Ano">2020</td><td data-label="Partido"><span class="party-chip republicanos">Republicanos</span></td><td data-label="Espectro">Direita</td><td class="num" data-label="Partidos">3</td><td data-label="Coligação">PTB / REPUBLICANOS / PATRIOTA</td></tr>
+          <tr class="flip"><td data-label="Ano">2024</td><td data-label="Partido"><span class="party-chip pp">PP</span></td><td data-label="Espectro">Direita</td><td class="num" data-label="Partidos">5</td><td data-label="Coligação">REPUBLICANOS / PP / MDB / Federação PSDB&#8209;Cidadania</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:13px;color:var(--caption)">Fonte: <code>consulta_cand</code>, campo <code>DS_COMPOSICAO_COLIGACAO</code>, TSE, por ano. Espectro classificado pelo partido de registro da candidatura (legenda principal), não pela coligação inteira.</p>
+    <p style="font-size:13px;color:var(--caption)">Fonte: <code>consulta_cand</code>, campo <code>DS_COMPOSICAO_COLIGACAO</code>, TSE, por ano. Espectro classificado pelo partido de registro da candidatura (legenda principal), não pela coligação inteira. Linha em verde é a única vitória da série; as outras cinco são derrota (o tamanho da coligação de cada uma está discutido no texto acima).</p>
 
     <div class="table-scroll">
-      <table class="data">
+      <table class="data stack-mobile">
         <thead>
-          <tr><th>Ano</th><th>Vencedor</th><th>Partido do vencedor</th><th>Espectro</th><th class="num">Partidos</th><th>Coligação</th></tr>
+          <tr><th>Ano</th><th>Vencedor</th><th>Partido</th><th>Espectro</th><th class="num">Partidos</th><th>Coligação</th></tr>
         </thead>
         <tbody>
-          <tr><td>2004</td><td>Dr. Fernando</td><td><span class="party-chip psb">PSB</span></td><td>Centro-esquerda</td><td class="num">5</td><td>PSB / PP / PTB / PL / PMN</td></tr>
-          <tr><td>2008</td><td>Dr. Fernando</td><td><span class="party-chip psb">PSB</span></td><td>Centro-esquerda</td><td class="num">7</td><td>PR / PP / PRTB / PV / PRB / PHS / PSB</td></tr>
-          <tr><td>2012</td><td>Roberto Fiorin</td><td><span class="party-chip psb">PSB</span></td><td>Centro-esquerda</td><td class="num">6</td><td>PRB / PP / PDT / PR / PSB / PSDB</td></tr>
-          <tr><td>2016</td><td>Dr. Fernando</td><td><span class="party-chip psb">PSB</span></td><td>Centro-esquerda</td><td class="num">9</td><td>PSB / PROS / PMN / PSDB / PP / PSC / PR / PTN / PV</td></tr>
-          <tr><td>2020</td><td>Dr. Fernando</td><td><span class="party-chip psb">PSB</span></td><td>Centro-esquerda</td><td class="num">7</td><td>PP / PSL / PODE / CIDADANIA / DEM / PSB / PSDB</td></tr>
-          <tr class="flip"><td>2024</td><td>Hugo Luiz (grupo)</td><td><span class="party-chip pp">PP</span></td><td>Direita</td><td class="num">5</td><td>REPUBLICANOS / PP / MDB / Federação PSDB&#8209;Cidadania</td></tr>
+          <tr><td data-label="Ano">2004</td><td data-label="Vencedor">Dr. Fernando</td><td data-label="Partido"><span class="party-chip psb">PSB</span></td><td data-label="Espectro">Centro-esquerda</td><td class="num" data-label="Partidos">5</td><td data-label="Coligação">PSB / PP / PTB / PL / PMN</td></tr>
+          <tr><td data-label="Ano">2008</td><td data-label="Vencedor">Dr. Fernando</td><td data-label="Partido"><span class="party-chip psb">PSB</span></td><td data-label="Espectro">Centro-esquerda</td><td class="num" data-label="Partidos">7</td><td data-label="Coligação">PR / PP / PRTB / PV / PRB / PHS / PSB</td></tr>
+          <tr><td data-label="Ano">2012</td><td data-label="Vencedor">Roberto Fiorin</td><td data-label="Partido"><span class="party-chip psb">PSB</span></td><td data-label="Espectro">Centro-esquerda</td><td class="num" data-label="Partidos">6</td><td data-label="Coligação">PRB / PP / PDT / PR / PSB / PSDB</td></tr>
+          <tr><td data-label="Ano">2016</td><td data-label="Vencedor">Dr. Fernando</td><td data-label="Partido"><span class="party-chip psb">PSB</span></td><td data-label="Espectro">Centro-esquerda</td><td class="num" data-label="Partidos">9</td><td data-label="Coligação">PSB / PROS / PMN / PSDB / PP / PSC / PR / PTN / PV</td></tr>
+          <tr><td data-label="Ano">2020</td><td data-label="Vencedor">Dr. Fernando</td><td data-label="Partido"><span class="party-chip psb">PSB</span></td><td data-label="Espectro">Centro-esquerda</td><td class="num" data-label="Partidos">7</td><td data-label="Coligação">PP / PSL / PODE / CIDADANIA / DEM / PSB / PSDB</td></tr>
+          <tr class="flip"><td data-label="Ano">2024</td><td data-label="Vencedor">Hugo Luiz (grupo)</td><td data-label="Partido"><span class="party-chip pp">PP</span></td><td data-label="Espectro">Direita</td><td class="num" data-label="Partidos">5</td><td data-label="Coligação">REPUBLICANOS / PP / MDB / Federação PSDB&#8209;Cidadania</td></tr>
         </tbody>
       </table>
     </div>

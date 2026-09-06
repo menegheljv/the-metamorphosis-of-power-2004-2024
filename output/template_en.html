@@ -661,34 +661,34 @@
     <p>On the opposing side, the pattern is the reverse. In the five elections this group lost, between 2004 and 2020, the winner was always <strong>PSB</strong>: Dr. Fernando took 2004, 2008, 2016 and 2020, and Roberto Fiorin, also PSB, took 2012, four terms and two different names under the same party label, twenty years straight. That streak only breaks in 2024, when Rolmar Boteccia tries to keep PSB in power and loses to Hugo Luiz's PP. In other words, while the losing side changed parties every election, the winning side had a stable label for two decades. It was precisely that stability that broke in 2024, along with the result.</p>
 
     <div class="table-scroll">
-      <table class="data">
+      <table class="data stack-mobile">
         <thead>
-          <tr><th>Year</th><th>Group's party</th><th>Spectrum</th><th class="num">Parties</th><th>Coalition</th><th>Result</th></tr>
+          <tr><th>Year</th><th>Group's party</th><th>Spectrum</th><th class="num">Parties</th><th>Coalition</th></tr>
         </thead>
         <tbody>
-          <tr><td>2004</td><td><span class="party-chip pt">PT</span></td><td>Left</td><td class="num">5</td><td>PPS / PT / PSDB / PTN / PT do B</td><td>loss</td></tr>
-          <tr><td>2008</td><td><span class="party-chip psdb">PSDB</span></td><td>Center-right</td><td class="num">5</td><td>PTB / PSDB / PMDB / PT do B / PPS</td><td>loss</td></tr>
-          <tr><td>2012</td><td><span class="party-chip psd">PSD</span></td><td>Center-right</td><td class="num">6</td><td>PT / PTB / PMDB / PPS / DEM / PSD</td><td>loss</td></tr>
-          <tr><td>2016</td><td><span class="party-chip pmdb">PMDB</span></td><td>Center</td><td class="num">9</td><td>PMDB / PPS / PSD / PTB / PT / PDT / PATRIOTA / REDE / DEM</td><td>loss (largest coalition of the series)</td></tr>
-          <tr><td>2020</td><td><span class="party-chip republicanos">Republicanos</span></td><td>Right</td><td class="num">3</td><td>PTB / REPUBLICANOS / PATRIOTA</td><td>loss (smallest coalition of the series)</td></tr>
-          <tr class="flip"><td>2024</td><td><span class="party-chip pp">PP</span></td><td>Right</td><td class="num">5</td><td>REPUBLICANOS / PP / MDB / PSDB&#8209;Cidadania federation</td><td>win</td></tr>
+          <tr><td data-label="Year">2004</td><td data-label="Party"><span class="party-chip pt">PT</span></td><td data-label="Spectrum">Left</td><td class="num" data-label="Parties">5</td><td data-label="Coalition">PPS / PT / PSDB / PTN / PT do B</td></tr>
+          <tr><td data-label="Year">2008</td><td data-label="Party"><span class="party-chip psdb">PSDB</span></td><td data-label="Spectrum">Center-right</td><td class="num" data-label="Parties">5</td><td data-label="Coalition">PTB / PSDB / PMDB / PT do B / PPS</td></tr>
+          <tr><td data-label="Year">2012</td><td data-label="Party"><span class="party-chip psd">PSD</span></td><td data-label="Spectrum">Center-right</td><td class="num" data-label="Parties">6</td><td data-label="Coalition">PT / PTB / PMDB / PPS / DEM / PSD</td></tr>
+          <tr><td data-label="Year">2016</td><td data-label="Party"><span class="party-chip pmdb">PMDB</span></td><td data-label="Spectrum">Center</td><td class="num" data-label="Parties">9</td><td data-label="Coalition">PMDB / PPS / PSD / PTB / PT / PDT / PATRIOTA / REDE / DEM</td></tr>
+          <tr><td data-label="Year">2020</td><td data-label="Party"><span class="party-chip republicanos">Republicanos</span></td><td data-label="Spectrum">Right</td><td class="num" data-label="Parties">3</td><td data-label="Coalition">PTB / REPUBLICANOS / PATRIOTA</td></tr>
+          <tr class="flip"><td data-label="Year">2024</td><td data-label="Party"><span class="party-chip pp">PP</span></td><td data-label="Spectrum">Right</td><td class="num" data-label="Parties">5</td><td data-label="Coalition">REPUBLICANOS / PP / MDB / PSDB&#8209;Cidadania federation</td></tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:13px;color:var(--caption)">Source: <code>consulta_cand</code>, field <code>DS_COMPOSICAO_COLIGACAO</code>, TSE, per year. Spectrum classified by the candidacy's party of registration (lead party), not the whole coalition.</p>
+    <p style="font-size:13px;color:var(--caption)">Source: <code>consulta_cand</code>, field <code>DS_COMPOSICAO_COLIGACAO</code>, TSE, per year. Spectrum classified by the candidacy's party of registration (lead party), not the whole coalition. The green row is the only win in the series; the other five are losses (each coalition's size is discussed in the text above).</p>
 
     <div class="table-scroll">
-      <table class="data">
+      <table class="data stack-mobile">
         <thead>
-          <tr><th>Year</th><th>Winner</th><th>Winner's party</th><th>Spectrum</th><th class="num">Parties</th><th>Coalition</th></tr>
+          <tr><th>Year</th><th>Winner</th><th>Party</th><th>Spectrum</th><th class="num">Parties</th><th>Coalition</th></tr>
         </thead>
         <tbody>
-          <tr><td>2004</td><td>Dr. Fernando</td><td><span class="party-chip psb">PSB</span></td><td>Center-left</td><td class="num">5</td><td>PSB / PP / PTB / PL / PMN</td></tr>
-          <tr><td>2008</td><td>Dr. Fernando</td><td><span class="party-chip psb">PSB</span></td><td>Center-left</td><td class="num">7</td><td>PR / PP / PRTB / PV / PRB / PHS / PSB</td></tr>
-          <tr><td>2012</td><td>Roberto Fiorin</td><td><span class="party-chip psb">PSB</span></td><td>Center-left</td><td class="num">6</td><td>PRB / PP / PDT / PR / PSB / PSDB</td></tr>
-          <tr><td>2016</td><td>Dr. Fernando</td><td><span class="party-chip psb">PSB</span></td><td>Center-left</td><td class="num">9</td><td>PSB / PROS / PMN / PSDB / PP / PSC / PR / PTN / PV</td></tr>
-          <tr><td>2020</td><td>Dr. Fernando</td><td><span class="party-chip psb">PSB</span></td><td>Center-left</td><td class="num">7</td><td>PP / PSL / PODE / CIDADANIA / DEM / PSB / PSDB</td></tr>
-          <tr class="flip"><td>2024</td><td>Hugo Luiz (group)</td><td><span class="party-chip pp">PP</span></td><td>Right</td><td class="num">5</td><td>REPUBLICANOS / PP / MDB / PSDB&#8209;Cidadania federation</td></tr>
+          <tr><td data-label="Year">2004</td><td data-label="Winner">Dr. Fernando</td><td data-label="Party"><span class="party-chip psb">PSB</span></td><td data-label="Spectrum">Center-left</td><td class="num" data-label="Parties">5</td><td data-label="Coalition">PSB / PP / PTB / PL / PMN</td></tr>
+          <tr><td data-label="Year">2008</td><td data-label="Winner">Dr. Fernando</td><td data-label="Party"><span class="party-chip psb">PSB</span></td><td data-label="Spectrum">Center-left</td><td class="num" data-label="Parties">7</td><td data-label="Coalition">PR / PP / PRTB / PV / PRB / PHS / PSB</td></tr>
+          <tr><td data-label="Year">2012</td><td data-label="Winner">Roberto Fiorin</td><td data-label="Party"><span class="party-chip psb">PSB</span></td><td data-label="Spectrum">Center-left</td><td class="num" data-label="Parties">6</td><td data-label="Coalition">PRB / PP / PDT / PR / PSB / PSDB</td></tr>
+          <tr><td data-label="Year">2016</td><td data-label="Winner">Dr. Fernando</td><td data-label="Party"><span class="party-chip psb">PSB</span></td><td data-label="Spectrum">Center-left</td><td class="num" data-label="Parties">9</td><td data-label="Coalition">PSB / PROS / PMN / PSDB / PP / PSC / PR / PTN / PV</td></tr>
+          <tr><td data-label="Year">2020</td><td data-label="Winner">Dr. Fernando</td><td data-label="Party"><span class="party-chip psb">PSB</span></td><td data-label="Spectrum">Center-left</td><td class="num" data-label="Parties">7</td><td data-label="Coalition">PP / PSL / PODE / CIDADANIA / DEM / PSB / PSDB</td></tr>
+          <tr class="flip"><td data-label="Year">2024</td><td data-label="Winner">Hugo Luiz (group)</td><td data-label="Party"><span class="party-chip pp">PP</span></td><td data-label="Spectrum">Right</td><td class="num" data-label="Parties">5</td><td data-label="Coalition">REPUBLICANOS / PP / MDB / PSDB&#8209;Cidadania federation</td></tr>
         </tbody>
       </table>
     </div>

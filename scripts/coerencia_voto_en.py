@@ -134,7 +134,7 @@ for ax, df, year, color, r in zip(axes, [df2020, df2024], [2020, 2024], [BLUE, G
 axes[0].set_ylabel("% of valid votes for the group's council candidates, same precinct", fontsize=10, color=INK)
 
 fig.text(0.06, 0.99, "IN 2020, THE MAYOR AND COUNCIL VOTE MOVED TOGETHER. IN 2024, LESS SO.", fontsize=14.5, color=INK, fontfamily="Anton", ha="left", va="top")
-fig.text(0.06, 0.935, "Each point is one voting precinct: valid votes for the group's mayoral candidate vs. combined valid votes for the group's council candidates", fontsize=9.5, color=MUTED, ha="left", va="top")
+fig.text(0.06, 0.935, "Each point is one precinct: valid votes for mayor vs. for the group's council candidates", fontsize=9.5, color=MUTED, ha="left", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.89])
 buf = BytesIO()
 plt.savefig(buf, format="png", facecolor=BG)

@@ -132,7 +132,7 @@ for ax, df, year, color, r in zip(axes, [df2020, df2024], [2020, 2024], [BLUE, G
 axes[0].set_ylabel("% de votos válidos nos candidatos a vereador do grupo, na mesma seção", fontsize=10, color=INK)
 
 fig.text(0.06, 0.99, "EM 2020, O VOTO PARA PREFEITO E VEREADOR ANDAVA JUNTO. EM 2024, MENOS.", fontsize=14.5, color=INK, fontfamily="Anton", ha="left", va="top")
-fig.text(0.06, 0.935, "Cada ponto é uma seção eleitoral: votos válidos no candidato do grupo a prefeito vs. votos válidos somados dos candidatos do grupo a vereador", fontsize=9.5, color=MUTED, ha="left", va="top")
+fig.text(0.06, 0.935, "Cada ponto é uma seção: votos válidos no prefeito vs. nos vereadores do grupo", fontsize=9.5, color=MUTED, ha="left", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.89])
 buf = BytesIO()
 plt.savefig(buf, format="png", facecolor=BG)

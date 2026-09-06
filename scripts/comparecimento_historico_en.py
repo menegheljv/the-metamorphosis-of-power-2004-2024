@@ -30,7 +30,7 @@ BG = "#ffffff"
 INK = "#333333"
 MUTED = "#8f8f8f"
 GRID = "#e2e2e2"
-BLUE = "#2f6690"  # neutral/informational, matches the site's 3-color palette
+GREEN = "#1f9d63"
 
 YEARS = [2004, 2008, 2012, 2016, 2020, 2024]
 rows = []
@@ -51,10 +51,10 @@ fig, ax = plt.subplots(figsize=(9, 5), dpi=160)
 fig.patch.set_facecolor(BG)
 ax.set_facecolor(BG)
 
-ax.plot(df_out["ano"], df_out["pct_comparecimento"], color=BLUE, linewidth=3, marker="o", markersize=9, zorder=3)
+ax.plot(df_out["ano"], df_out["pct_comparecimento"], color=GREEN, linewidth=3, marker="o", markersize=9, zorder=3)
 for x, y in zip(df_out["ano"], df_out["pct_comparecimento"]):
     ax.annotate(f"{y:.1f}%", (x, y), textcoords="offset points", xytext=(0, 14),
-                ha="center", fontsize=12, fontweight="bold", fontfamily="Anton", color=INK)
+                ha="center", fontsize=12, fontweight="bold", fontfamily="Anton", color=MUTED)
 
 ax.set_xticks(YEARS)
 ax.set_ylim(70, 98)
