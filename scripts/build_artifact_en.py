@@ -20,7 +20,7 @@ chart_keys = ["historical_arc", "ibge_eleitorado", "slope", "grid", "municipio",
               "genero_candidatos", "raca_candidatos",
               "campanha_visualizacoes", "campanha_engajamento", "campanha_categorias",
               "idade_candidatos", "patrimonio_candidatos", "pesquisas_timeline", "pesquisas_evolucao",
-              "distritos_heatmap"]
+              "distritos_heatmap", "coerencia_voto", "comparecimento_historico"]
 for key in chart_keys:
     with open(os.path.join(OUT_EN, f"chart_{key}.b64"), encoding="utf-8") as f:
         b64 = f.read().strip()
@@ -44,11 +44,7 @@ for _, r in comp.iterrows():
     is_flip = r.get('virou_de_derrota_para_vitoria') is True
     is_new = pd.isna(r['pct_2020'])
     cls = ' class="flip"' if is_flip else ''
-    v2020 = "&mdash;" if pd.isna(r['votos_candidato_2020']) else f"{int(r['votos_candidato_2020'])}"
-    t2020 = "&mdash;" if pd.isna(r['total_secao_2020']) else f"{int(r['total_secao_2020'])}"
     p2020 = "&mdash;" if pd.isna(r['pct_2020']) else f"{r['pct_2020']:.1f}%"
-    v2024 = f"{int(r['votos_candidato_2024'])}"
-    t2024 = f"{int(r['total_secao_2024'])}"
     p2024 = f"{r['pct_2024']:.1f}%"
     var = "&mdash;" if pd.isna(r['variacao_pp']) else f"{r['variacao_pp']:+.1f} p.p."
     local = esc(r.get('local_votacao', ''))
@@ -59,8 +55,9 @@ for _, r in comp.iterrows():
     else:
         pill = ''
     rows.append(
-        f'<tr{cls}><td>{int(r["NR_SECAO"])}</td><td>{local}</td><td>{v2020}</td><td>{t2020}</td><td>{p2020}</td>'
-        f'<td>{v2024}</td><td>{t2024}</td><td>{p2024}</td><td>{var}</td><td>{pill}</td></tr>'
+        f'<tr{cls}><td data-label="Precinct">{int(r["NR_SECAO"])}</td><td data-label="Location">{local}</td>'
+        f'<td data-label="% 2020">{p2020}</td><td data-label="% 2024">{p2024}</td>'
+        f'<td data-label="Change">{var}</td><td data-label="">{pill}</td></tr>'
     )
 
 html = html.replace("{{TABLE_ROWS}}", "\n".join(rows))

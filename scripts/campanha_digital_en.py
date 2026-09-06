@@ -104,8 +104,7 @@ ax.set_facecolor(BG)
 
 x = range(len(FASE_ORDER))
 vals = [resumo.loc[f, "engajamento_medio"] for f in FASE_ORDER]
-colors = [FASE_COLOR[f] for f in FASE_ORDER]
-bars = ax.bar(x, vals, color=colors, width=0.6)
+bars = ax.bar(x, vals, color=GREEN, width=0.6)
 for bar, v in zip(bars, vals):
     ax.text(bar.get_x() + bar.get_width() / 2, v + 15, f"{v:.0f}", ha="center", fontsize=10, fontweight="bold", fontfamily="Anton", color=INK)
 ax.set_xticks(list(x))
@@ -168,8 +167,7 @@ ax1.set_axisbelow(True)
 
 cat_order2 = por_categoria.sort_values("engajamento_medio", ascending=True).index.tolist()
 y2 = range(len(cat_order2))
-colors2 = [GREEN if c in ("resultado", "testemunho", "resposta-ataque") else GOLD for c in cat_order2]
-ax2.barh(list(y2), [por_categoria.loc[c, "engajamento_medio"] for c in cat_order2], color=colors2, height=0.62)
+ax2.barh(list(y2), [por_categoria.loc[c, "engajamento_medio"] for c in cat_order2], color=GREEN, height=0.62)
 ax2.set_yticks(list(y2))
 ax2.set_yticklabels([CAT_LABEL.get(c, c).split("\n")[0] for c in cat_order2], fontsize=9.5)
 ax2.set_xlabel("Average engagement per post", fontsize=9.5, color=INK)

@@ -60,6 +60,8 @@ python scripts/geocode_locais.py
 python scripts/fetch_basemap.py
 python scripts/campanha_digital.py
 python scripts/distritos_analysis.py
+python scripts/coerencia_voto.py
+python scripts/comparecimento_historico.py
 python scripts/viz2.py && python scripts/viz3.py && python scripts/viz4.py && python scripts/viz5.py && python scripts/viz6.py
 python scripts/build_artifact.py
 ```
@@ -69,6 +71,10 @@ Produces `output/case_study.html` (Portuguese).
 `campanha_digital.py` reads `data/campanha_digital_posts.csv`, a manually-transcribed log of the candidacy's Instagram post history (not TSE data) - see the "Digital campaign" section of the case study for how it was built and its limits.
 
 `distritos_analysis.py` cross-references each precinct's 2024 polling location - mapped to one of Alfredo Chaves' 7 official districts via `data/distritos_mapping.csv`, built from the city hall's own locality list - with the group's mayoral vote share in each of the six elections, to see how the turnaround played out across the territory.
+
+`coerencia_voto.py` cross-references, per precinct, the group's mayoral vote share with the combined vote share of the group's council candidates (2020 and 2024), to measure how tightly the top-of-ticket and down-ballot votes moved together in each election.
+
+`comparecimento_historico.py` reads `data/detalhe_votacao_{year}_alfredo_chaves.csv` for all six elections to chart turnout as a share of registered voters, 2004-2024.
 
 ### English build
 
@@ -80,6 +86,8 @@ python scripts/ibge_cruzamento_en.py
 python scripts/ibge_demografico_en.py
 python scripts/campanha_digital_en.py
 python scripts/distritos_analysis_en.py
+python scripts/coerencia_voto_en.py
+python scripts/comparecimento_historico_en.py
 python scripts/viz2_en.py && python scripts/viz3_en.py && python scripts/viz4_en.py && python scripts/viz5_en.py && python scripts/viz6_en.py
 python scripts/build_artifact_en.py
 ```
