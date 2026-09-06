@@ -132,7 +132,7 @@ votos = [3681, 5779]
 pcts = [37.8, 56.4]
 bars = ax.bar(anos, votos, color=[RED, BLUE], width=0.55)
 for bar, v_, p_ in zip(bars, votos, pcts):
-    ax.text(bar.get_x()+bar.get_width()/2, v_+80, f"{v_} votos\n({p_}%)", ha='center', fontsize=10, fontweight='bold', fontfamily='Anton', color=INK)
+    ax.text(bar.get_x()+bar.get_width()/2, v_+80, f"{v_} votos\n({p_}%)", ha='center', fontsize=10, fontfamily='Bricolage Grotesque', color=INK)
 ax.set_ylabel('Votos válidos nominais ao cargo de Prefeito', fontsize=10)
 ax.set_title('RESULTADO MUNICIPAL — CANDIDATO A PREFEITO\nALFREDO CHAVES (ES), 2020 VS 2024', fontsize=12, fontweight='bold', fontfamily='Anton', pad=12)
 ax.spines[['top', 'right']].set_visible(False)
@@ -154,7 +154,7 @@ def verea_chart(df, ano, cadeiras_nossos, total):
         ax.text(val + 6, bar.get_y() + bar.get_height()/2, str(val), va='center', fontsize=9, color=INK)
     ax.set_xlabel('Votos nominais válidos', fontsize=10)
     ax.set_title(f'VEREADORES ELEITOS EM {ano} — CÂMARA MUNICIPAL DE ALFREDO CHAVES\n{cadeiras_nossos} DE {total} CADEIRAS COM A CHAPA DO GRUPO (VERDE) · {total-cadeiras_nossos} COM ADVERSÁRIOS (VERMELHO)',
-                 fontsize=11.5, fontweight='bold', fontfamily='Anton', pad=12)
+                 fontsize=11.5, fontfamily='Bricolage Grotesque', pad=12)
     ax.spines[['top', 'right']].set_visible(False)
     ax.grid(axis='x', color=GRID, linewidth=0.7)
     ax.set_axisbelow(True)
@@ -178,8 +178,8 @@ y = range(len(anos))
 ax.barh(y, nossos, color=BLUE, height=0.5, label='Chapa do grupo')
 ax.barh(y, advers, left=nossos, color=RED, height=0.5, label='Adversários')
 for i, (n_, a_) in enumerate(zip(nossos, advers)):
-    ax.text(n_/2, i, f"{n_}", va='center', ha='center', color='white', fontsize=13, fontweight='bold', fontfamily='Anton')
-    ax.text(n_ + a_/2, i, f"{a_}", va='center', ha='center', color='white', fontsize=13, fontweight='bold', fontfamily='Anton')
+    ax.text(n_/2, i, f"{n_}", va='center', ha='center', color='white', fontsize=13, fontfamily='Bricolage Grotesque')
+    ax.text(n_ + a_/2, i, f"{a_}", va='center', ha='center', color='white', fontsize=13, fontfamily='Bricolage Grotesque')
 tot = summ['cadeiras_2020_total']
 ax.axvline(tot/2, color=INK, linestyle=':', linewidth=1.2, alpha=0.6)
 ax.text(tot/2, 1.42, 'maioria simples', ha='center', fontsize=8.5, color=GREY)
@@ -205,7 +205,7 @@ votos = [summ['votos_2020_nossos'], summ['votos_2024_nossos']]
 pcts = [summ['votos_2020_nossos']/summ['votos_2020_total']*100, summ['votos_2024_nossos']/summ['votos_2024_total']*100]
 bars = ax.bar(anos, votos, color=[RED, BLUE], width=0.5)
 for bar, v_, p_ in zip(bars, votos, pcts):
-    ax.text(bar.get_x()+bar.get_width()/2, v_+60, f"{v_} votos\n({p_:.1f}% do pleito)", ha='center', fontsize=10, fontweight='bold', fontfamily='Anton', color=INK)
+    ax.text(bar.get_x()+bar.get_width()/2, v_+60, f"{v_} votos\n({p_:.1f}% do pleito)", ha='center', fontsize=10, fontfamily='Bricolage Grotesque', color=INK)
 ax.set_ylabel('Soma de votos nominais — candidatos a vereador da chapa', fontsize=10)
 ax.set_title('VOTAÇÃO TOTAL DOS CANDIDATOS A VEREADOR DA CHAPA\nALFREDO CHAVES (ES), 2020 VS 2024', fontsize=12.5, fontweight='bold', fontfamily='Anton', pad=12)
 ax.spines[['top', 'right']].set_visible(False)

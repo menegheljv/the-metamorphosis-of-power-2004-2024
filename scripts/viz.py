@@ -148,7 +148,7 @@ votos = [3681, 5779]
 pcts = [37.8, 56.4]
 bars = ax.bar(anos, votos, color=[CORAL, TEAL], width=0.55)
 for bar, v_, p_ in zip(bars, votos, pcts):
-    ax.text(bar.get_x()+bar.get_width()/2, v_+80, f"{v_} votos\n({p_}%)", ha='center', fontsize=10, fontweight='bold', fontfamily='Anton', color=NAVY)
+    ax.text(bar.get_x()+bar.get_width()/2, v_+80, f"{v_} votos\n({p_}%)", ha='center', fontsize=10, fontfamily='Bricolage Grotesque', color=NAVY)
 ax.set_ylabel('Votos validos nominais ao cargo de Prefeito', fontsize=10)
 ax.set_title('Resultado municipal — candidato a prefeito\nAlfredo Chaves (ES), 2020 vs 2024', fontsize=12, fontweight='bold', fontfamily='Anton', pad=12)
 ax.spines[['top', 'right']].set_visible(False)

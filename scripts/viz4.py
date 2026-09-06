@@ -71,7 +71,7 @@ for ax, cands, ano in zip(axes, [cand2020, cand2024], [2020, 2024]):
     for bar, age in zip(bars, ages):
         ax.text(age + 1.5, bar.get_y()+bar.get_height()/2, f"{age} anos", va='center', fontsize=10, color=INK)
     ax.set_xlim(0, 85)
-    ax.set_title(f"CANDIDATOS A PREFEITO — {ano}", fontsize=12, fontweight='bold', fontfamily='Anton')
+    ax.set_title(f"CANDIDATOS A PREFEITO — {ano}", fontsize=12, fontfamily='Bricolage Grotesque')
     ax.spines[['top','right']].set_visible(False)
     ax.grid(axis='x', color=GRID, linewidth=0.7)
     ax.set_axisbelow(True)
@@ -91,7 +91,7 @@ for ax, cands, ano in zip(axes, [cand2020, cand2024], [2020, 2024]):
     bars = ax.barh(names, pat, color=colors, height=0.55)
     for bar, p in zip(bars, pat):
         ax.text(p + max(pat)*0.02, bar.get_y()+bar.get_height()/2, f"R$ {p:,.0f}".replace(",","."), va='center', fontsize=9.5, color=INK)
-    ax.set_title(f"PATRIMÔNIO DECLARADO — {ano}", fontsize=12, fontweight='bold', fontfamily='Anton')
+    ax.set_title(f"PATRIMÔNIO DECLARADO — {ano}", fontsize=12, fontfamily='Bricolage Grotesque')
     ax.spines[['top','right']].set_visible(False)
     ax.grid(axis='x', color=GRID, linewidth=0.7)
     ax.set_axisbelow(True)

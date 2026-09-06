@@ -130,7 +130,7 @@ for i in range(data.shape[0]):
             ax.text(j, i, "sem\ndado", ha="center", va="center", fontsize=8, color=MUTED)
         else:
             txt_color = "white" if (v < 25 or v > 75) else INK
-            ax.text(j, i, f"{v:.1f}%", ha="center", va="center", fontsize=11, fontweight="bold", fontfamily="Anton", color=txt_color)
+            ax.text(j, i, f"{v:.1f}%", ha="center", va="center", fontsize=11, fontfamily="Bricolage Grotesque", color=txt_color)
 
 ax.set_xticks(range(len(YEARS)))
 ax.set_xticklabels(YEARS, fontsize=10.5)
@@ -143,7 +143,7 @@ ax.set_xticks([x - 0.5 for x in range(1, len(YEARS))], minor=True)
 ax.set_yticks([y - 0.5 for y in range(1, len(DISTRITO_ORDER))], minor=True)
 ax.grid(which="minor", color=BG, linewidth=3)
 
-fig.text(0.06, 0.97, "ONDE O GRUPO ERA FORTE, ONDE ERA FRACO", fontsize=15, color=INK, fontfamily="Anton", ha="left", va="top")
+fig.text(0.06, 0.97, "ONDE O GRUPO ERA FORTE, ONDE ERA FRACO", fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
 fig.text(0.06, 0.915, "% do candidato do grupo para prefeito, por distrito, 2004–2024 (média ponderada pelos votos válidos das seções de cada distrito)", fontsize=10, color=MUTED, ha="left", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.88])
 buf = BytesIO()

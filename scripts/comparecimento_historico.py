@@ -53,7 +53,7 @@ ax.set_facecolor(BG)
 ax.plot(df_out["ano"], df_out["pct_comparecimento"], color=GREEN, linewidth=3, marker="o", markersize=9, zorder=3)
 for x, y in zip(df_out["ano"], df_out["pct_comparecimento"]):
     ax.annotate(f"{y:.1f}%", (x, y), textcoords="offset points", xytext=(0, 14),
-                ha="center", fontsize=12, fontfamily="Anton", color=MUTED)
+                ha="center", fontsize=12, fontfamily="Bricolage Grotesque", color=MUTED)
 
 ax.set_xticks(YEARS)
 ax.set_ylim(70, 98)
@@ -67,7 +67,7 @@ for spine in ["left", "bottom"]:
 ax.grid(axis="y", color=GRID, linewidth=0.8)
 ax.set_axisbelow(True)
 
-fig.text(0.08, 0.97, "COMPARECIMENTO EM QUEDA, MESMO COM MAIS ELEITORES", fontsize=15, color=INK, fontfamily="Anton", ha="left", va="top")
+fig.text(0.08, 0.97, "COMPARECIMENTO EM QUEDA, MESMO COM MAIS ELEITORES", fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
 fig.text(0.08, 0.905, "% dos eleitores aptos que compareceram às urnas, eleição para prefeito, 2004–2024", fontsize=10, color=MUTED, ha="left", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.86])
 buf = BytesIO()

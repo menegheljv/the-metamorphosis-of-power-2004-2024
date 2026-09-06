@@ -73,7 +73,7 @@ ax.set_xticks(x)
 ax.set_ylim(50, 100)
 ax.set_ylabel("Registered voters as % of estimated population (IBGE)", color=INK)
 fig.text(0.085, 0.94, "THE ELECTORATE GREW, THE POPULATION DIDN'T",
-         fontsize=15, color=INK, fontfamily="Anton", ha="left", va="top")
+         fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
 fig.text(0.085, 0.865, "Alfredo Chaves, Brazil. TSE (registered voters) x IBGE (estimated population)",
          fontsize=10.5, color=MUTED, ha="left", va="top")
 ax.tick_params(colors=MUTED)

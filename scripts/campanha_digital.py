@@ -117,7 +117,7 @@ for spine in ["left", "bottom"]:
 ax.yaxis.grid(True, color=GRID, linewidth=0.8)
 ax.set_axisbelow(True)
 ax.legend(loc="upper left", frameon=False, fontsize=8.5, ncol=3)
-fig.text(0.085, 0.965, "DE 9,3 MIL A 41 MIL VISUALIZAÇÕES", fontsize=15, color=INK, fontfamily="Anton", ha="left", va="top")
+fig.text(0.085, 0.965, "DE 9,3 MIL A 41 MIL VISUALIZAÇÕES", fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
 fig.text(0.085, 0.905, "Visualizações por post no Instagram, filiação (mar/24) até a vitória (06/10/24)", fontsize=10, color=MUTED, ha="left", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.86])
 buf = BytesIO()
@@ -139,11 +139,11 @@ x = range(len(FASE_ORDER))
 vals = [resumo.loc[f, "engajamento_medio"] for f in FASE_ORDER]
 bars = ax.bar(x, vals, color=GREEN, width=0.6)
 for bar, v in zip(bars, vals):
-    ax.text(bar.get_x() + bar.get_width() / 2, v + 15, f"{v:.0f}", ha="center", fontsize=10, fontweight="bold", fontfamily="Anton", color=INK)
+    ax.text(bar.get_x() + bar.get_width() / 2, v + 15, f"{v:.0f}", ha="center", fontsize=10, fontfamily="Bricolage Grotesque", color=INK)
 ax.set_xticks(list(x))
 ax.set_xticklabels([FASE_LABEL[f] for f in FASE_ORDER], fontsize=9)
 ax.set_ylabel("Engajamento médio por post\n(curtidas + comentários + compartilhamentos)", color=INK, fontsize=10)
-fig.text(0.085, 0.965, "O ENGAJAMENTO QUASE QUINTUPLICOU ATÉ O RESULTADO", fontsize=13.5, color=INK, fontfamily="Anton", ha="left", va="top")
+fig.text(0.085, 0.965, "O ENGAJAMENTO QUASE QUINTUPLICOU ATÉ O RESULTADO", fontsize=13.5, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
 fig.text(0.085, 0.9, "Engajamento médio por fase da campanha (curtidas, comentários e compartilhamentos) — a fase de filiação tem apenas 1 post na amostra", fontsize=9.5, color=MUTED, ha="left", va="top")
 ax.tick_params(colors=MUTED)
 for spine in ["top", "right"]:
@@ -186,7 +186,7 @@ ax1.set_yticks(list(y))
 ax1.set_yticklabels([CAT_LABEL.get(c, c).split("\n")[0] for c in cat_order], fontsize=9.5)
 ax1.invert_yaxis()
 ax1.set_xlabel("Número de posts", fontsize=9.5, color=INK)
-ax1.set_title("O QUE FOI POSTADO", fontsize=11.5, fontweight="bold", fontfamily="Anton", color=INK, loc="left", pad=10)
+ax1.set_title("O QUE FOI POSTADO", fontsize=11.5, fontweight="bold", fontfamily="Anton", color=MUTED, loc="left", pad=10)
 for spine in ["top", "right"]:
     ax1.spines[spine].set_visible(False)
 for spine in ["left", "bottom"]:
@@ -201,7 +201,7 @@ ax2.barh(list(y2), [por_categoria.loc[c, "engajamento_medio"] for c in cat_order
 ax2.set_yticks(list(y2))
 ax2.set_yticklabels([CAT_LABEL.get(c, c).split("\n")[0] for c in cat_order2], fontsize=9.5)
 ax2.set_xlabel("Engajamento médio por post", fontsize=9.5, color=INK)
-ax2.set_title("O QUE MAIS ENGAJOU", fontsize=11.5, fontweight="bold", fontfamily="Anton", color=INK, loc="left", pad=10)
+ax2.set_title("O QUE MAIS ENGAJOU", fontsize=11.5, fontweight="bold", fontfamily="Anton", color=MUTED, loc="left", pad=10)
 for spine in ["top", "right"]:
     ax2.spines[spine].set_visible(False)
 for spine in ["left", "bottom"]:
@@ -210,7 +210,7 @@ ax2.tick_params(colors=MUTED)
 ax2.xaxis.grid(True, color=GRID, linewidth=0.7)
 ax2.set_axisbelow(True)
 
-fig.text(0.06, 0.985, "EVENTO DE RUA É O CONTEÚDO MAIS COMUM — MAS TESTEMUNHO ENGAJA MAIS", fontsize=12.5, color=INK, fontfamily="Anton", ha="left", va="top")
+fig.text(0.06, 0.985, "EVENTO DE RUA É O CONTEÚDO MAIS COMUM — MAS TESTEMUNHO ENGAJA MAIS", fontsize=12.5, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.92])
 buf = BytesIO()
 plt.savefig(buf, format="png", facecolor=BG)

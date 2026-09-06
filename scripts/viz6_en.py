@@ -35,7 +35,7 @@ plt.rcParams.update({
     "savefig.facecolor": BG,
     "text.color": INK,
     "axes.labelcolor": INK,
-    "axes.titlecolor": INK,
+    "axes.titlecolor": GREY,
     "xtick.color": INK,
     "ytick.color": INK,
     "legend.labelcolor": INK,
@@ -90,9 +90,9 @@ ax.annotate("poll from\nSep 17\n(outlier)", xy=(x_outlier, outlier_rolmar), xyte
 
 for i, (x, v) in enumerate(zip(x_main, hugo)):
     dy = 2.6 if i % 2 == 0 else 4.6
-    ax.text(x, v + dy, f"{v:.1f}%", ha='center', fontsize=10, fontweight='bold', fontfamily='Anton', color=BLUE)
+    ax.text(x, v + dy, f"{v:.1f}%", ha='center', fontsize=10, fontfamily='Bricolage Grotesque', color=BLUE)
 for i, (x, v) in enumerate(zip(x_main, rolmar)):
-    ax.text(x, v + 3.6, f"{v:.1f}%", ha='center', fontsize=8.8, fontweight='bold', fontfamily='Anton', color=RED)
+    ax.text(x, v + 3.6, f"{v:.1f}%", ha='center', fontsize=8.8, fontfamily='Bricolage Grotesque', color=RED)
 
 ax.set_xlim(-0.4, 5.4)
 ax.set_xticks(x_main)

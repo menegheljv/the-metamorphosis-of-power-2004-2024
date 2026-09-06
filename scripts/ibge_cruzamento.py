@@ -97,7 +97,7 @@ ax.set_xticks(x)
 ax.set_ylim(50, 100)
 ax.set_ylabel("Eleitores aptos como % da população estimada (IBGE)", color=INK)
 fig.text(0.085, 0.94, "O ELEITORADO CRESCEU, A POPULAÇÃO NÃO",
-         fontsize=15, color=INK, fontfamily="Anton", ha="left", va="top")
+         fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
 fig.text(0.085, 0.865, "Alfredo Chaves, ES. Cruzamento TSE (eleitores aptos) x IBGE (população estimada)",
          fontsize=10.5, color=MUTED, ha="left", va="top")
 ax.tick_params(colors=MUTED)

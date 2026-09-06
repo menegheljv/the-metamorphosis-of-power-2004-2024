@@ -131,7 +131,7 @@ votos = [3681, 5779]
 pcts = [37.8, 56.4]
 bars = ax.bar(anos, votos, color=[RED, BLUE], width=0.55)
 for bar, v_, p_ in zip(bars, votos, pcts):
-    ax.text(bar.get_x()+bar.get_width()/2, v_+80, f"{v_} votes\n({p_}%)", ha='center', fontsize=10, fontweight='bold', fontfamily='Anton', color=INK)
+    ax.text(bar.get_x()+bar.get_width()/2, v_+80, f"{v_} votes\n({p_}%)", ha='center', fontsize=10, fontfamily='Bricolage Grotesque', color=INK)
 ax.set_ylabel('Valid nominal votes for Mayor', fontsize=10)
 ax.set_title('CITYWIDE RESULT — MAYORAL CANDIDATE\nALFREDO CHAVES, BRAZIL, 2020 VS 2024', fontsize=12, fontweight='bold', fontfamily='Anton', pad=12)
 ax.spines[['top', 'right']].set_visible(False)
@@ -153,7 +153,7 @@ def verea_chart(df, ano, cadeiras_nossos, total):
         ax.text(val + 6, bar.get_y() + bar.get_height()/2, str(val), va='center', fontsize=9, color=INK)
     ax.set_xlabel('Valid nominal votes', fontsize=10)
     ax.set_title(f'COUNCIL MEMBERS ELECTED IN {ano} — ALFREDO CHAVES CITY COUNCIL\n{cadeiras_nossos} OF {total} SEATS WITH THE GROUP\'S TICKET (GREEN) · {total-cadeiras_nossos} WITH OPPONENTS (RED)',
-                 fontsize=11.5, fontweight='bold', fontfamily='Anton', pad=12)
+                 fontsize=11.5, fontfamily='Bricolage Grotesque', pad=12)
     ax.spines[['top', 'right']].set_visible(False)
     ax.grid(axis='x', color=GRID, linewidth=0.7)
     ax.set_axisbelow(True)
@@ -177,8 +177,8 @@ y = range(len(anos))
 ax.barh(y, nossos, color=BLUE, height=0.5, label="Group's ticket")
 ax.barh(y, advers, left=nossos, color=RED, height=0.5, label='Opponents')
 for i, (n_, a_) in enumerate(zip(nossos, advers)):
-    ax.text(n_/2, i, f"{n_}", va='center', ha='center', color='white', fontsize=13, fontweight='bold', fontfamily='Anton')
-    ax.text(n_ + a_/2, i, f"{a_}", va='center', ha='center', color='white', fontsize=13, fontweight='bold', fontfamily='Anton')
+    ax.text(n_/2, i, f"{n_}", va='center', ha='center', color='white', fontsize=13, fontfamily='Bricolage Grotesque')
+    ax.text(n_ + a_/2, i, f"{a_}", va='center', ha='center', color='white', fontsize=13, fontfamily='Bricolage Grotesque')
 tot = summ['cadeiras_2020_total']
 ax.axvline(tot/2, color=INK, linestyle=':', linewidth=1.2, alpha=0.6)
 ax.text(tot/2, 1.42, 'simple majority', ha='center', fontsize=8.5, color=GREY)
@@ -204,7 +204,7 @@ votos = [summ['votos_2020_nossos'], summ['votos_2024_nossos']]
 pcts = [summ['votos_2020_nossos']/summ['votos_2020_total']*100, summ['votos_2024_nossos']/summ['votos_2024_total']*100]
 bars = ax.bar(anos, votos, color=[RED, BLUE], width=0.5)
 for bar, v_, p_ in zip(bars, votos, pcts):
-    ax.text(bar.get_x()+bar.get_width()/2, v_+60, f"{v_} votes\n({p_:.1f}% of the race)", ha='center', fontsize=10, fontweight='bold', fontfamily='Anton', color=INK)
+    ax.text(bar.get_x()+bar.get_width()/2, v_+60, f"{v_} votes\n({p_:.1f}% of the race)", ha='center', fontsize=10, fontfamily='Bricolage Grotesque', color=INK)
 ax.set_ylabel("Sum of nominal votes — the ticket's council candidates", fontsize=10)
 ax.set_title("TOTAL VOTES FOR THE TICKET'S COUNCIL CANDIDATES\nALFREDO CHAVES, BRAZIL, 2020 VS 2024", fontsize=12.5, fontweight='bold', fontfamily='Anton', pad=12)
 ax.spines[['top', 'right']].set_visible(False)

@@ -75,8 +75,8 @@ for ax, cands, ano in zip(axes, [cand2020, cand2024], [2020, 2024]):
     bars = ax.barh(names, vals, color=colors, height=0.55)
     for bar, v in zip(bars, vals):
         ax.text(v + max(vals)*0.02, bar.get_y()+bar.get_height()/2, f"R$ {v:,.0f}".replace(",", "."),
-                 va='center', fontsize=9.5, fontweight='bold', fontfamily='Anton', color=INK)
-    ax.set_title(f"RECEITA DECLARADA — {ano}", fontsize=12, fontweight='bold', fontfamily='Anton')
+                 va='center', fontsize=9.5, fontfamily='Bricolage Grotesque', color=INK)
+    ax.set_title(f"RECEITA DECLARADA — {ano}", fontsize=12, fontfamily='Bricolage Grotesque')
     ax.spines[['top', 'right']].set_visible(False)
     ax.grid(axis='x', color=GRID, linewidth=0.7)
     ax.set_axisbelow(True)
@@ -105,8 +105,8 @@ for ax, cands, ano in zip(axes, [cvcand2020, cvcand2024], [2020, 2024]):
     bars = ax.barh(names, vals, color=colors, height=0.55)
     for bar, v in zip(bars, vals):
         ax.text(v + max(vals)*0.02, bar.get_y()+bar.get_height()/2, f"R$ {v:.2f}/voto",
-                 va='center', fontsize=9.5, fontweight='bold', fontfamily='Anton', color=INK)
-    ax.set_title(f"EFICIÊNCIA DE INVESTIMENTO POR VOTO — {ano}", fontsize=12, fontweight='bold', fontfamily='Anton')
+                 va='center', fontsize=9.5, fontfamily='Bricolage Grotesque', color=INK)
+    ax.set_title(f"EFICIÊNCIA DE INVESTIMENTO POR VOTO — {ano}", fontsize=12, fontfamily='Bricolage Grotesque')
     ax.spines[['top', 'right']].set_visible(False)
     ax.grid(axis='x', color=GRID, linewidth=0.7)
     ax.set_axisbelow(True)
@@ -150,8 +150,8 @@ y = range(len(anos))
 ax.barh(y, comp, color=BLUE, height=0.5, label='Compareceram')
 ax.barh(y, abst, left=comp, color=GREY, height=0.5, label='Abstenções')
 for i, (c, a) in enumerate(zip(comp, abst)):
-    ax.text(c/2, i, f"{c:,}".replace(",", "."), va='center', ha='center', color='white', fontsize=10.5, fontweight='bold', fontfamily='Anton')
-    ax.text(c + a/2, i, f"{a:,}".replace(",", "."), va='center', ha='center', color='white', fontsize=10.5, fontweight='bold', fontfamily='Anton')
+    ax.text(c/2, i, f"{c:,}".replace(",", "."), va='center', ha='center', color='white', fontsize=10.5, fontfamily='Bricolage Grotesque')
+    ax.text(c + a/2, i, f"{a:,}".replace(",", "."), va='center', ha='center', color='white', fontsize=10.5, fontfamily='Bricolage Grotesque')
 ax.set_yticks(list(y))
 ax.set_yticklabels([f"2020 ({S['turnout']['pct_comparecimento_2020']}%)", f"2024 ({S['turnout']['pct_comparecimento_2024']}%)"], fontsize=11)
 ax.set_xlabel('Eleitores aptos', fontsize=10)
