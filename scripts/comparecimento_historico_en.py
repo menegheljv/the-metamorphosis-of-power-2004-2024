@@ -54,7 +54,7 @@ ax.set_facecolor(BG)
 ax.plot(df_out["ano"], df_out["pct_comparecimento"], color=GREEN, linewidth=3, marker="o", markersize=9, zorder=3)
 for x, y in zip(df_out["ano"], df_out["pct_comparecimento"]):
     ax.annotate(f"{y:.1f}%", (x, y), textcoords="offset points", xytext=(0, 14),
-                ha="center", fontsize=12, fontweight="bold", fontfamily="Anton", color=MUTED)
+                ha="center", fontsize=12, fontfamily="Anton", color=MUTED)
 
 ax.set_xticks(YEARS)
 ax.set_ylim(70, 98)
