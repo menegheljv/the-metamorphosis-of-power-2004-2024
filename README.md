@@ -2,7 +2,9 @@
 
 *"A metamorfose do poder em Alfredo Chaves: não vivemos mais como nossos pais"* (a nod to Belchior's "Como Nossos Pais"). A case study analyzing municipal election data in Alfredo Chaves, ES (Brazil), built entirely from official public data from the TSE (Brazil's Superior Electoral Court) and cross-referenced with IBGE population, sex, race/color and income data.
 
-**[Read it in Portuguese →](https://claude.ai/code/artifact/22daf01e-c77d-446e-beb4-51d6a1c879a7)** · **[Read it in English →](https://claude.ai/code/artifact/487ac675-6174-4eee-be60-57189dc11525)**
+**Live site: [Read it in Portuguese →](https://menegheljv.github.io/alfredo-chaves-eleicoes-2020-2024/)** · **[Read it in English →](https://menegheljv.github.io/alfredo-chaves-eleicoes-2020-2024/en/)**
+
+*(Also available as Claude Artifacts: [Portuguese](https://claude.ai/code/artifact/22daf01e-c77d-446e-beb4-51d6a1c879a7) · [English](https://claude.ai/code/artifact/487ac675-6174-4eee-be60-57189dc11525))*
 
 Both are the same full case study — same sections, charts, and interactive map — kept in sync with each other.
 
