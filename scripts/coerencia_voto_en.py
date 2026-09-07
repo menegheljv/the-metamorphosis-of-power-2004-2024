@@ -33,10 +33,11 @@ plt.rcParams["font.family"] = "Bricolage Grotesque"
 BG = "#ffffff"
 INK = "#333333"
 MUTED = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 GRID = "#e2e2e2"
 GREEN = "#1f9d63"
 GREEN_DEEP = "#157a4d"
-BLUE = "#2f6690"
+RED = "#c8433a"
 
 PREFEITO_NOSSO = {2020: "RONALDO BIANCHI", 2024: "HUGO LUIZ PICOLI MENEGHEL"}
 NOSSOS_PARTIDOS = {2020: {"PTB", "REPUBLICANOS", "PATRIOTA"}, 2024: {"REPUBLICANOS", "PP", "PSDB"}}
@@ -112,7 +113,7 @@ print(f"R² 2020 = {r2020**2:.3f}   R² 2024 = {r2024**2:.3f}")
 fig, axes = plt.subplots(1, 2, figsize=(11, 5.2), dpi=160, sharey=True, sharex=True)
 fig.patch.set_facecolor(BG)
 
-for ax, df, year, color, r in zip(axes, [df2020, df2024], [2020, 2024], [BLUE, GREEN_DEEP], [r2020, r2024]):
+for ax, df, year, color, r in zip(axes, [df2020, df2024], [2020, 2024], [RED, GREEN_DEEP], [r2020, r2024]):
     ax.set_facecolor(BG)
     ax.scatter(df["pct_prefeito_nosso"], df["pct_vereador_nosso"], s=46, color=color, alpha=0.75, edgecolor="white", linewidth=0.6, zorder=3)
     if len(df) > 1:
@@ -132,8 +133,8 @@ for ax, df, year, color, r in zip(axes, [df2020, df2024], [2020, 2024], [BLUE, G
 
 axes[0].set_ylabel("% of valid votes for the group's council candidates, same precinct", fontsize=10, color=INK)
 
-fig.text(0.06, 0.99, "IN 2020, THE MAYOR AND COUNCIL VOTE MOVED TOGETHER. IN 2024, LESS SO.", fontsize=14.5, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
-fig.text(0.06, 0.935, "Each point is one precinct: valid votes for mayor vs. for the group's council candidates", fontsize=9.5, color=MUTED, ha="left", va="top")
+fig.text(0.5, 0.99, "IN 2020, THE MAYOR AND COUNCIL VOTE MOVED TOGETHER. IN 2024, LESS SO.", fontsize=14.5, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
+fig.text(0.5, 0.935, "Each point is one precinct: valid votes for mayor vs. for the group's council candidates", fontsize=9.5, color=MUTED, fontfamily="Anton", ha="center", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.89])
 buf = BytesIO()
 plt.savefig(buf, format="png", facecolor=BG)

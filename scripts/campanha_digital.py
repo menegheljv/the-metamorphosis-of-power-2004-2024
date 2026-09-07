@@ -37,6 +37,7 @@ plt.rcParams["font.family"] = "Bricolage Grotesque"
 BG = "#ffffff"
 INK = "#333333"
 MUTED = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 GRID = "#e2e2e2"
 GREEN = "#5fd996"
 RED = "#e2554c"
@@ -90,9 +91,7 @@ fig, ax = plt.subplots(figsize=(10.5, 5.8), dpi=160)
 fig.patch.set_facecolor(BG)
 ax.set_facecolor(BG)
 
-for fase in FASE_ORDER:
-    sub = df[df["fase"] == fase]
-    ax.scatter(sub["data"], sub["views"], s=32, color=FASE_COLOR[fase], zorder=3, label=FASE_LABEL[fase].split("\n")[0])
+ax.scatter(df["data"], df["views"], s=32, color=GREEN, zorder=3)
 ax.plot(df["data"], df["views"], color=GRID, linewidth=1, zorder=1)
 
 milestones = [
@@ -105,7 +104,7 @@ for d, label in milestones:
     dt = pd.Timestamp(d)
     y = df.loc[(df["data"] - dt).abs().idxmin(), "views"]
     ax.annotate(label, (dt, y), textcoords="offset points", xytext=(0, 14), ha="center",
-                fontsize=8, color=INK, fontweight="bold")
+                fontsize=8, color=RED, fontweight="bold")
 
 ax.set_ylabel("Visualizações por post", color=INK)
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%b/%y"))
@@ -116,9 +115,8 @@ for spine in ["left", "bottom"]:
     ax.spines[spine].set_color(GRID)
 ax.yaxis.grid(True, color=GRID, linewidth=0.8)
 ax.set_axisbelow(True)
-ax.legend(loc="upper left", frameon=False, fontsize=8.5, ncol=3)
-fig.text(0.085, 0.965, "DE 9,3 MIL A 41 MIL VISUALIZAÇÕES", fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
-fig.text(0.085, 0.905, "Visualizações por post no Instagram, filiação (mar/24) até a vitória (06/10/24)", fontsize=10, color=MUTED, ha="left", va="top")
+fig.text(0.5, 0.965, "DE 9,3 MIL A 41 MIL VISUALIZAÇÕES", fontsize=15, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
+fig.text(0.5, 0.905, "Visualizações por post no Instagram, filiação (mar/24) até a vitória (06/10/24)", fontsize=10, color=MUTED, fontfamily="Anton", ha="center", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.86])
 buf = BytesIO()
 plt.savefig(buf, format="png", facecolor=BG)
@@ -143,8 +141,8 @@ for bar, v in zip(bars, vals):
 ax.set_xticks(list(x))
 ax.set_xticklabels([FASE_LABEL[f] for f in FASE_ORDER], fontsize=9)
 ax.set_ylabel("Engajamento médio por post\n(curtidas + comentários + compartilhamentos)", color=INK, fontsize=10)
-fig.text(0.085, 0.965, "O ENGAJAMENTO QUASE QUINTUPLICOU ATÉ O RESULTADO", fontsize=13.5, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
-fig.text(0.085, 0.9, "Engajamento médio por fase da campanha (curtidas, comentários e compartilhamentos) — a fase de filiação tem apenas 1 post na amostra", fontsize=9.5, color=MUTED, ha="left", va="top")
+fig.text(0.5, 0.965, "O ENGAJAMENTO QUASE QUINTUPLICOU ATÉ O RESULTADO", fontsize=13.5, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
+fig.text(0.5, 0.9, "Engajamento médio por fase da campanha (curtidas, comentários e compartilhamentos) — a fase de filiação tem apenas 1 post na amostra", fontsize=9.5, color=MUTED, fontfamily="Anton", ha="center", va="top")
 ax.tick_params(colors=MUTED)
 for spine in ["top", "right"]:
     ax.spines[spine].set_visible(False)
@@ -210,7 +208,7 @@ ax2.tick_params(colors=MUTED)
 ax2.xaxis.grid(True, color=GRID, linewidth=0.7)
 ax2.set_axisbelow(True)
 
-fig.text(0.06, 0.985, "EVENTO DE RUA É O CONTEÚDO MAIS COMUM — MAS TESTEMUNHO ENGAJA MAIS", fontsize=12.5, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
+fig.text(0.5, 0.985, "EVENTO DE RUA É O CONTEÚDO MAIS COMUM — MAS TESTEMUNHO ENGAJA MAIS", fontsize=12.5, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.92])
 buf = BytesIO()
 plt.savefig(buf, format="png", facecolor=BG)

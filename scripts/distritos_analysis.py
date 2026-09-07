@@ -39,6 +39,7 @@ plt.rcParams["font.family"] = "Bricolage Grotesque"
 BG = "#ffffff"
 INK = "#333333"
 MUTED = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 GRID = "#e2e2e2"
 
 # ---------------------------------------------------------------------------
@@ -143,8 +144,8 @@ ax.set_xticks([x - 0.5 for x in range(1, len(YEARS))], minor=True)
 ax.set_yticks([y - 0.5 for y in range(1, len(DISTRITO_ORDER))], minor=True)
 ax.grid(which="minor", color=BG, linewidth=3)
 
-fig.text(0.06, 0.97, "ONDE O GRUPO ERA FORTE, ONDE ERA FRACO", fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
-fig.text(0.06, 0.915, "% do candidato do grupo para prefeito, por distrito, 2004–2024 (média ponderada pelos votos válidos das seções de cada distrito)", fontsize=10, color=MUTED, ha="left", va="top")
+fig.text(0.5, 0.97, "ONDE O GRUPO ERA FORTE, ONDE ERA FRACO", fontsize=15, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
+fig.text(0.5, 0.915, "% do candidato do grupo para prefeito, por distrito, 2004–2024 (média ponderada pelos votos válidos das seções de cada distrito)", fontsize=10, color=MUTED, fontfamily="Anton", ha="center", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.88])
 buf = BytesIO()
 plt.savefig(buf, format="png", facecolor=BG)

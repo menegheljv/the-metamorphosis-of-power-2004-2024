@@ -19,6 +19,7 @@ OUT = os.path.join(BASE, "output")
 BLUE = "#5fd996"
 GOLD = "#caa0ac"
 GREY = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 BG = "#ffffff"
 GRID = "#e2e2e2"
 INK = "#333333"
@@ -32,7 +33,7 @@ plt.rcParams.update({
     "savefig.facecolor": BG,
     "text.color": INK,
     "axes.labelcolor": INK,
-    "axes.titlecolor": INK,
+    "axes.titlecolor": TITLE_GRAY,
     "xtick.color": INK,
     "ytick.color": INK,
     "legend.labelcolor": INK,

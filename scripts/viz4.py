@@ -22,6 +22,7 @@ BLUE = "#5fd996"
 RED = "#e2554c"
 GOLD = "#caa0ac"
 GREY = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 BG = "#ffffff"
 GRID = "#e2e2e2"
 INK = "#333333"
@@ -76,7 +77,7 @@ for ax, cands, ano in zip(axes, [cand2020, cand2024], [2020, 2024]):
     ax.grid(axis='x', color=GRID, linewidth=0.7)
     ax.set_axisbelow(True)
     ax.invert_yaxis()
-fig.suptitle("IDADE DOS CANDIDATOS A PREFEITO — CANDIDATURA DO GRUPO EM VERDE, 3º COLOCADO EM AZUL", fontsize=13, fontweight='bold', fontfamily='Anton', y=1.03)
+fig.suptitle("IDADE DOS CANDIDATOS A PREFEITO — CANDIDATURA DO GRUPO EM VERDE, 3º COLOCADO EM AZUL", fontsize=13, fontweight='bold', fontfamily='Anton', color=TITLE_GRAY, y=1.03)
 plt.tight_layout()
 charts['idade_candidatos'] = fig_to_b64(fig)
 
@@ -97,7 +98,7 @@ for ax, cands, ano in zip(axes, [cand2020, cand2024], [2020, 2024]):
     ax.set_axisbelow(True)
     ax.invert_yaxis()
     ax.set_xlim(0, max(max(c[2] for c in cand2020), max(c[2] for c in cand2024))*1.25)
-fig.suptitle("PATRIMÔNIO DECLARADO DOS CANDIDATOS A PREFEITO — CANDIDATURA DO GRUPO EM VERDE, 3º COLOCADO EM AZUL", fontsize=13, fontweight='bold', fontfamily='Anton', y=1.03)
+fig.suptitle("PATRIMÔNIO DECLARADO DOS CANDIDATOS A PREFEITO — CANDIDATURA DO GRUPO EM VERDE, 3º COLOCADO EM AZUL", fontsize=13, fontweight='bold', fontfamily='Anton', color=TITLE_GRAY, y=1.03)
 plt.tight_layout()
 charts['patrimonio_candidatos'] = fig_to_b64(fig)
 

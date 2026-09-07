@@ -29,6 +29,7 @@ plt.rcParams["font.family"] = "Bricolage Grotesque"
 BG = "#ffffff"
 INK = "#333333"
 MUTED = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 GRID = "#e2e2e2"
 GREEN = "#1f9d63"
 
@@ -68,8 +69,8 @@ for spine in ["left", "bottom"]:
 ax.grid(axis="y", color=GRID, linewidth=0.8)
 ax.set_axisbelow(True)
 
-fig.text(0.08, 0.97, "TURNOUT DOWN, EVEN AS THE ELECTORATE GREW", fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
-fig.text(0.08, 0.905, "% of registered voters who cast a ballot, mayoral election, 2004–2024", fontsize=10, color=MUTED, ha="left", va="top")
+fig.text(0.5, 0.97, "TURNOUT DOWN, EVEN AS THE ELECTORATE GREW", fontsize=15, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
+fig.text(0.5, 0.905, "% of registered voters who cast a ballot, mayoral election, 2004–2024", fontsize=10, color=MUTED, fontfamily="Anton", ha="center", va="top")
 plt.tight_layout(rect=[0, 0, 1, 0.86])
 buf = BytesIO()
 plt.savefig(buf, format="png", facecolor=BG)

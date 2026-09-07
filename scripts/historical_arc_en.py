@@ -58,6 +58,7 @@ summary = pd.DataFrame(rows)
 BG = "#ffffff"
 INK = "#333333"
 MUTED = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 GRID = "#e2e2e2"
 GREEN = "#5fd996"
 RED = "#e2554c"
@@ -83,7 +84,7 @@ for xi, yi, name in zip(x, y, summary["candidato_do_grupo"]):
 ax.set_xticks(x)
 ax.set_ylim(0, 70)
 ax.set_ylabel("Vote share of the group's candidate, % of valid votes", color=INK)
-ax.set_title("FIVE LOSSES, THEN A WIN — MAYOR, ALFREDO CHAVES 2004–2024", fontsize=13, pad=14, color=MUTED, fontweight="bold", fontfamily='Anton')
+ax.set_title("FIVE LOSSES, THEN A WIN — MAYOR, ALFREDO CHAVES 2004–2024", fontsize=13, pad=14, color=TITLE_GRAY, fontweight="bold", fontfamily='Anton')
 ax.tick_params(colors=MUTED)
 for spine in ["top", "right"]:
     ax.spines[spine].set_visible(False)

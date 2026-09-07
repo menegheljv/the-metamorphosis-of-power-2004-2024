@@ -26,6 +26,7 @@ plt.rcParams["font.family"] = "Bricolage Grotesque"
 BG = "#ffffff"
 INK = "#333333"
 MUTED = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 GRID = "#e2e2e2"
 GREEN = "#5fd996"
 RED = "#e2554c"
@@ -96,8 +97,8 @@ ax.axhline(50, color=GRID, linestyle="--", linewidth=1, zorder=0)
 ax.text(-0.35, 51.6, "50%", color=MUTED, fontsize=9, ha="left")
 ax.set_ylim(0, 62)
 ax.set_ylabel("% women", color=INK)
-fig.text(0.09, 0.955, "WHO RUNS ISN'T WHO VOTES", fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
-fig.text(0.09, 0.885, "Female participation — population, electorate and candidates, Alfredo Chaves", fontsize=10.5, color=MUTED, ha="left", va="top")
+fig.text(0.5, 0.955, "WHO RUNS ISN'T WHO VOTES", fontsize=15, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
+fig.text(0.5, 0.885, "Female participation — population, electorate and candidates, Alfredo Chaves", fontsize=10.5, color=MUTED, fontfamily="Anton", ha="center", va="top")
 ax.tick_params(colors=MUTED)
 for spine in ["top", "right"]:
     ax.spines[spine].set_visible(False)
@@ -140,8 +141,8 @@ ax.set_xticks(list(x))
 ax.set_xticklabels(grupos, fontsize=11)
 ax.set_ylabel("% of total", color=INK)
 ax.set_ylim(0, 80)
-fig.text(0.085, 0.955, "DO CANDIDATES LOOK LIKE THE PEOPLE WHO LIVE HERE?", fontsize=13.5, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
-fig.text(0.085, 0.895, "Declared race/color — municipal population vs. mayoral and council candidates", fontsize=10.5, color=MUTED, ha="left", va="top")
+fig.text(0.5, 0.955, "DO CANDIDATES LOOK LIKE THE PEOPLE WHO LIVE HERE?", fontsize=13.5, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
+fig.text(0.5, 0.895, "Declared race/color — municipal population vs. mayoral and council candidates", fontsize=10.5, color=MUTED, fontfamily="Anton", ha="center", va="top")
 ax.legend(loc="upper right", frameon=False, fontsize=9.5)
 ax.tick_params(colors=MUTED)
 for spine in ["top", "right"]:

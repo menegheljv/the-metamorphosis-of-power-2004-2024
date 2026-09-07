@@ -26,6 +26,7 @@ plt.rcParams["font.family"] = "Bricolage Grotesque"
 BG = "#ffffff"
 INK = "#333333"
 MUTED = "#8f8f8f"
+TITLE_GRAY = "#4d4d4d"
 GRID = "#e2e2e2"
 GREEN = "#5fd996"
 
@@ -72,10 +73,10 @@ for xi, yi in zip(x, y):
 ax.set_xticks(x)
 ax.set_ylim(50, 100)
 ax.set_ylabel("Registered voters as % of estimated population (IBGE)", color=INK)
-fig.text(0.085, 0.94, "THE ELECTORATE GREW, THE POPULATION DIDN'T",
-         fontsize=15, color=MUTED, fontweight="bold", fontfamily="Anton", ha="left", va="top")
-fig.text(0.085, 0.865, "Alfredo Chaves, Brazil. TSE (registered voters) x IBGE (estimated population)",
-         fontsize=10.5, color=MUTED, ha="left", va="top")
+fig.text(0.5, 0.94, "THE ELECTORATE GREW, THE POPULATION DIDN'T",
+         fontsize=15, color=TITLE_GRAY, fontweight="bold", fontfamily="Anton", ha="center", va="top")
+fig.text(0.5, 0.865, "Alfredo Chaves, Brazil. TSE (registered voters) x IBGE (estimated population)",
+         fontsize=10.5, color=MUTED, fontfamily="Anton", ha="center", va="top")
 ax.tick_params(colors=MUTED)
 for spine in ["top", "right"]:
     ax.spines[spine].set_visible(False)
