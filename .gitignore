@@ -1,5 +1,7 @@
 output/*.b64
 output/en/*.b64
+output/hires/
+output/graficos.pdf
 pesquisas/
 __pycache__/
 *.pyc
