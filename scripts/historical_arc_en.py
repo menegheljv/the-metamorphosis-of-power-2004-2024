@@ -73,8 +73,6 @@ colors = [RED if r == "lost" else GREEN for r in summary["resultado_do_grupo"]]
 
 ax.plot(x, y, color=MUTED, linewidth=2, zorder=1)
 ax.scatter(x, y, s=180, c=colors, zorder=2, edgecolors=BG, linewidths=1.5)
-ax.axhline(50, color=GRID, linestyle="--", linewidth=1, zorder=0)
-ax.text(x[0] - 0.3, 50.8, "50% needed to win", fontsize=9, color=MUTED)
 
 for xi, yi, name in zip(x, y, summary["candidato_do_grupo"]):
     label = f"{name.title()}\n{yi:.1f}%"
@@ -82,6 +80,7 @@ for xi, yi, name in zip(x, y, summary["candidato_do_grupo"]):
                 ha="center", fontsize=8.5, color=INK)
 
 ax.set_xticks(x)
+ax.set_xlim(x[0] - 1.6, x[-1] + 1.6)
 ax.set_ylim(0, 70)
 ax.set_ylabel("Vote share of the group's candidate, % of valid votes", color=INK)
 ax.set_title("FIVE LOSSES AND THE TURNAROUND — MAYOR, ALFREDO CHAVES 2004–2024", fontsize=13, pad=14, color=TITLE_GRAY, fontweight="bold", fontfamily='Anton')
