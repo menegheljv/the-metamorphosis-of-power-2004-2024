@@ -100,11 +100,16 @@ milestones = [
     ("2024-08-03", "Anúncio do\nvice-prefeito"),
     ("2024-10-06", "Vitória"),
 ]
+milestone_pts = []
 for d, label in milestones:
     dt = pd.Timestamp(d)
     y = df.loc[(df["data"] - dt).abs().idxmin(), "views"]
+    milestone_pts.append((dt, y))
     ax.annotate(label, (dt, y), textcoords="offset points", xytext=(0, 14), ha="center",
                 fontsize=8, color=RED, fontweight="bold")
+
+ms_x, ms_y = zip(*milestone_pts)
+ax.scatter(ms_x, ms_y, s=90, color=RED, zorder=4, edgecolors=BG, linewidths=1.5)
 
 ax.set_ylabel("Visualizações por post", color=INK)
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%b/%y"))

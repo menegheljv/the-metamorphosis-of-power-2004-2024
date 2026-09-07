@@ -98,7 +98,7 @@ for xi, yi, name in zip(x, y, summary["candidato_do_grupo"]):
 ax.set_xticks(x)
 ax.set_ylim(0, 70)
 ax.set_ylabel("Votação do candidato do grupo, % dos votos válidos", color=INK)
-ax.set_title("CINCO DERROTAS, DEPOIS UMA VITÓRIA — PREFEITO, ALFREDO CHAVES 2004–2024", fontsize=13, pad=14, color=TITLE_GRAY, fontweight="bold", fontfamily='Anton')
+ax.set_title("CINCO DERROTAS E A VIRADA — PREFEITO, ALFREDO CHAVES 2004–2024", fontsize=13, pad=14, color=TITLE_GRAY, fontweight="bold", fontfamily='Anton')
 ax.tick_params(colors=MUTED)
 for spine in ["top", "right"]:
     ax.spines[spine].set_visible(False)
